@@ -10,10 +10,6 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
-  get '/error' do
-    erb :error
-  end
-
   post '/login' do
     if User.find_by(username: params[:username])
       @user = User.find_by(username: params[:username])
