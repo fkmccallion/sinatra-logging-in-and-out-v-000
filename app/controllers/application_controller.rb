@@ -29,5 +29,9 @@ class ApplicationController < Sinatra::Base
     session.clear
   end
 
+  get '/error' do
+    erb :error
+  end
+
 
 end
