@@ -4,10 +4,10 @@ class Helpers
   end
 
   def self.is_logged_in?(session_hash)
-    if session_hash[:user_id] != nil
-      true
-    else
+    if session_hash[:user_id] == nil
       false
+    else
+      true
     end
   end
 end
